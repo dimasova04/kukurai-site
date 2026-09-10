@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Кукурай — горячая сладкая кукуруза в стаканчиках, приготовленная на пару. Фирменные ретромобили в торговых центрах Петербурга и области. Меню, точки, вакансии.">
+<meta property="og:title" content="Кукурай — горячая кукуруза в стаканчиках">
+<meta property="og:description" content="Сладкая. Горячая. Готовим на пару. Найдите наш ретромобиль в торговых центрах Петербурга.">
+<meta property="og:image" content="https://kukuraispb.ru/img/og.jpg">
+<meta property="og:url" content="https://kukuraispb.ru/">
+<link rel="canonical" href="https://kukuraispb.ru/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Кукурай</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --mint: #7FD0C5;
+    --mint-deep: #4FB3A6;
+    --mint-soft: #DDF2EE;
+    --cream: #FAF7F0;
+    --paper: #FFFFFF;
+    --cocoa: #4A3222;
+    --ink: #2A211B;
+    --muted: #7A6A5E;
+    --gold: #E9B120;
+    --line: rgba(74, 50, 34, 0.12);
+    --glass: rgba(250, 247, 240, 0.72);
+    --shadow: 0 24px 60px -30px rgba(42, 33, 27, 0.35);
+    --radius: 28px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --mint-soft: #22332F;
+      --cream: #151C1A;
+      --paper: #1D2624;
+      --cocoa: #E3D2C1;
+      --ink: #F3EEE6;
+      --muted: #A89B90;
+      --line: rgba(243, 238, 230, 0.12);
+      --glass: rgba(21, 28, 26, 0.72);
+      --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
+    }
+  }
+  :root[data-theme="dark"] {
+    --mint-soft: #22332F;
+    --cream: #151C1A;
+    --paper: #1D2624;
+    --cocoa: #E3D2C1;
+    --ink: #F3EEE6;
+    --muted: #A89B90;
+    --line: rgba(243, 238, 230, 0.12);
+    --glass: rgba(21, 28, 26, 0.72);
+    --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  h1, h2, h3 { font-family: "Unbounded", "Manrope", Arial, sans-serif; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.02; font-weight: 700; }
+  h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); line-height: 1.1; font-weight: 700; }
+  h3 { font-size: 1.15rem; font-weight: 700; }
+  p { margin: 0; }
+  .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+  .eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mint-deep); }
+  .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; }
+  section { padding: 96px 0; }
+  section + section { border-top: 1px solid var(--line); }
+
+  /* nav */
+  .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); background: var(--glass); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 24px; }
+  .brand { font-family: "Unbounded", sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--cocoa); display: flex; align-items: center; gap: 10px; }
+  .brand svg { width: 26px; height: 26px; }
+  .nav nav { display: flex; gap: 28px; font-weight: 600; font-size: 0.95rem; }
+  .nav nav a { opacity: 0.8; transition: opacity .2s; }
+  .nav nav a:hover, .nav nav a:focus-visible { opacity: 1; outline: none; border-bottom: 2px solid var(--mint); }
+  @media (max-width: 640px) { .nav nav { gap: 16px; font-size: 0.85rem; } .nav nav a:nth-child(2) { display: none; } }
+
+  /* buttons */
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 0.98rem; transition: transform .15s, box-shadow .15s; }
+  .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .btn-primary { background: var(--cocoa); color: var(--cream); }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 30px -12px rgba(74,50,34,.6); }
+  .btn-mint { background: var(--mint); color: #1F3532; }
+  .btn-mint:hover { transform: translateY(-1px); }
+  .btn-ghost { border: 1.5px solid var(--line); color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--mint); }
+
+  /* hero */
+  .hero { padding: 88px 0 72px; text-align: center; }
+  .hero .lead { margin: 22px auto 0; }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+  .hero-img { margin-top: 56px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+  .hero-img img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+
+  /* features */
+  .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 44px; }
+  .feature { padding: 28px 24px; border-radius: 22px; background: var(--paper); border: 1px solid var(--line); }
+  .feature .ico { width: 44px; height: 44px; border-radius: 14px; background: var(--mint-soft); display: grid; place-items: center; color: var(--mint-deep); margin-bottom: 18px; }
+  .feature p { color: var(--muted); font-size: 0.98rem; margin-top: 6px; }
+  @media (max-width: 900px) { .features { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .features { grid-template-columns: 1fr; } }
+
+  /* menu */
+  .menu-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
+  .sizes-img { margin-top: 44px; border-radius: var(--radius); overflow: hidden; background: var(--paper); }
+  .sizes-img img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+  .price { padding: 28px; border-radius: 22px; background: var(--paper); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+  .price .g { font-family: "Unbounded", sans-serif; font-size: 2rem; font-weight: 700; color: var(--cocoa); font-variant-numeric: tabular-nums; }
+  .price .g small { font-size: 1rem; font-weight: 500; margin-left: 4px; }
+  .price .rub { font-size: 1.35rem; font-weight: 700; margin-top: auto; font-variant-numeric: tabular-nums; }
+  .price .tag { font-size: 0.8rem; color: var(--muted); }
+  .price.pop { border-color: var(--mint); box-shadow: 0 0 0 4px var(--mint-soft); }
+  .toppings { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .toppings ul { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+  .toppings li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .toppings li span:last-child { font-weight: 700; font-variant-numeric: tabular-nums; }
+  @media (max-width: 800px) { .menu-head, .toppings { grid-template-columns: 1fr; } .prices { grid-template-columns: 1fr; } }
+
+  /* gallery */
+  .gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 320px 320px; gap: 18px; margin-top: 44px; }
+  .gallery figure { margin: 0; border-radius: 22px; overflow: hidden; background: var(--paper); }
+  .gallery figure:first-child { grid-row: span 2; }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .gallery figure:hover img { transform: scale(1.03); }
+  @media (max-width: 800px) { .gallery { grid-template-columns: 1fr; grid-template-rows: 260px 220px 220px; } .gallery figure:first-child { grid-row: auto; } }
+
+  /* jobs */
+  .job { margin-top: 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; padding: 40px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+  .job dl { margin: 22px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; }
+  .job dt { color: var(--muted); }
+  .job dd { margin: 0; font-weight: 600; }
+  .perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .perks li { display: flex; gap: 12px; align-items: flex-start; }
+  .perks li::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); margin-top: 9px; }
+  .job-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  @media (max-width: 800px) { .job { grid-template-columns: 1fr; padding: 28px; } }
+
+  /* contacts */
+  .contacts { display: grid; grid-template-columns: 1fr 1.4fr; gap: 28px; margin-top: 44px; align-items: stretch; }
+  .place { padding: 36px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 18px; }
+  .place .addr { font-size: 1.1rem; line-height: 1.45; }
+  .place .hours { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+  .place .dot { width: 10px; height: 10px; border-radius: 50%; background: #3BC46B; box-shadow: 0 0 0 4px rgba(59,196,107,.18); }
+  .place .links { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+  .map { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--mint-soft); min-height: 420px; position: relative; }
+  .map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+  .map .fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 24px; color: var(--muted); pointer-events: none; }
+  .map iframe { position: relative; z-index: 1; }
+  @media (max-width: 800px) { .contacts { grid-template-columns: 1fr; } }
+
+  footer { padding: 40px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+  .reveal { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { transition: opacity .7s ease, transform .7s ease; }
+    .reveal.pre { opacity: 0.001; transform: translateY(18px); }
+  }
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Кукурай — на главную">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c3.5 0 6 4 6 10s-2.5 10-6 10-6-4-6-10S8.5 2 12 2z" fill="#E9B120"/><path d="M9 6.5c.8 1.7 1.2 3.6 1.2 5.5s-.4 3.8-1.2 5.5M12 5c.8 2 1.2 4.4 1.2 7s-.4 5-1.2 7M15 6.5c.8 1.7 1.2 3.6 1.2 5.5s-.4 3.8-1.2 5.5" stroke="#4A3222" stroke-width="1.2" stroke-linecap="round"/><path d="M6.5 14c-2.2 2.2-3 5.5-2.5 8 2.4-.4 5-1.8 6.2-4.2" fill="#7FD0C5"/></svg>
+      Кукурай
+    </a>
+    <nav>
+      <a href="#menu">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#jobs">Вакансии</a>
+      <a href="#contacts">Точки и контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Горячая кукуруза в стаканчиках</p>
+      <h1 style="margin-top:14px">Сладкая. Горячая.<br>Готовим на пару.</h1>
+      <p class="lead">Стакан отборной сладкой кукурузы с маслом и любимым топпингом — за минуту, прямо в руки. Ищите наши ретромобили в торговых центрах Петербурга и области.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#menu">Смотреть меню</a>
+        <a class="btn btn-ghost" href="#contacts">Наши точки</a>
+      </div>
+      <div class="hero-img reveal"><img src="img/hero.jpg" alt="Стакан горячей кукурузы Кукурай на мятном фоне" width="1800" height="1012"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow">Почему Кукурай</p>
+      <h2 style="margin-top:14px">Простой продукт, сделанный честно</h2>
+      <p class="lead" style="margin-top:18px">«Кукурай» — сеть точек горячей кукурузы в стаканчиках. Мы готовим её на пару прямо при вас, в фирменных ретромобилях, которые невозможно пройти мимо.</p>
+      <div class="features">
+        <div class="feature reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22c4-4 8-8 8-13a8 8 0 1 0-16 0c0 5 4 9 8 13z"/><path d="M12 6v6"/></svg></div>
+          <h3>100% натурально</h3>
+          <p>Только отборное сладкое зерно, сливочное масло и соль. Без консервантов и «улучшителей».</p>
+        </div>
+        <div class="feature reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3c0 3-2 3-2 6s2 3 2 6M12 3c0 3-2 3-2 6s2 3 2 6M16 3c0 3-2 3-2 6s2 3 2 6"/><path d="M4 18h16"/></svg></div>
+          <h3>Готовим на пару</h3>
+          <p>Пар сохраняет сладость и хруст зерна — кукуруза не переваривается и не теряет витамины.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2s6 6 6 11a6 6 0 0 1-12 0c0-5 6-11 6-11z"/></svg></div>
+          <h3>Всегда горячая</h3>
+          <p>Готовим небольшими порциями в течение всего дня, чтобы каждый стакан был с пылу с жару.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.8 8.6a5 5 0 0 0-8.8-2.4 5 5 0 0 0-8.8 2.4c0 5.4 8.8 10.4 8.8 10.4s8.8-5 8.8-10.4z"/></svg></div>
+          <h3>Максимум пользы</h3>
+          <p>Клетчатка, медленные углеводы и ноль жарки. Перекус, за который не стыдно перед ребёнком.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <p class="eyebrow">Меню</p>
+          <h2 style="margin-top:14px">Три размера. Один вкус детства.</h2>
+        </div>
+        <p class="lead">Выберите стакан по аппетиту и добавьте топпинг — от классики с маслом до кукурузы под пармезаном.</p>
+      </div>
+      <div class="sizes-img reveal"><img src="img/sizes.jpg" alt="Три размера стаканчиков кукурузы: 120, 170 и 240 граммов" width="1800" height="1012"></div>
+      <div class="prices">
+        <div class="price reveal"><span class="tag">Маленький</span><span class="g">120<small>г</small></span><span class="rub">200 ₽</span></div>
+        <div class="price pop reveal"><span class="tag">Средний · самый популярный</span><span class="g">170<small>г</small></span><span class="rub">250 ₽</span></div>
+        <div class="price reveal"><span class="tag">Большой</span><span class="g">240<small>г</small></span><span class="rub">350 ₽</span></div>
+      </div>
+      <div class="toppings">
+        <div>
+          <h3>Топпинги</h3>
+          <ul>
+            <li><span>Сливочное масло и соль</span><span>бесплатно</span></li>
+            <li><span>Пармезан</span><span>30 ₽</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Соусы</h3>
+          <ul>
+            <li><span>Сырный</span><span>бесплатно</span></li>
+            <li><span>Томатный кетчуп</span><span>бесплатно</span></li>
+            <li><span>Баффало острый</span><span>бесплатно</span></li>
+            <li><span>Сметана с луком</span><span>бесплатно</span></li>
+            <li><span>Сливочно-чесночный</span><span>бесплатно</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <p class="eyebrow">Ретромобиль</p>
+      <h2 style="margin-top:14px">Фирменный ретромобиль в каждой точке</h2>
+      <div class="gallery">
+        <figure class="reveal"><img src="img/interior.jpg" alt="Ретромобиль Кукурай в галерее торгового центра"></figure>
+        <figure class="reveal"><img src="img/kids.jpg" alt="Ретромобиль Кукурай рядом с детской площадкой"></figure>
+        <figure class="reveal"><img src="img/hands.jpg" alt="Ребёнок держит стакан горячей кукурузы"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="jobs">
+    <div class="wrap">
+      <p class="eyebrow">Вакансии</p>
+      <h2 style="margin-top:14px">Присоединяйтесь к команде</h2>
+      <p class="lead" style="margin-top:18px">Мы растём и открываем новые точки — ищем людей, которым нравится работать с гостями и держать порядок.</p>
+      <div class="job reveal">
+        <div>
+          <h3>Продавец на точку</h3>
+          <p class="eyebrow" style="margin-top:8px">Сейчас открыто · МЕГА Парнас</p>
+          <p class="lead" style="font-size:1.05rem;margin-top:10px">Готовить и продавать кукурузу, работать на кассе, держать точку в порядке. Научим за одну смену.</p>
+          <dl>
+            <dt>Доход</dt><dd>от 57 000 до 87 000 ₽ на руки</dd>
+            <dt>График</dt><dd>2/2 или 3/3, смена 9:30–22:00</dd>
+            <dt>Оформление</dt><dd>по ТК РФ с первого дня</dd>
+            <dt>Выплаты</dt><dd>2 раза в месяц, без задержек</dd>
+          </dl>
+          <div class="job-actions">
+            <a class="btn btn-mint" href="mailto:dimasova0404@yandex.ru?subject=Вакансия%20продавца%20Кукурай">Откликнуться по почте</a>
+            <a class="btn btn-ghost" href="tel:+79990292677">Позвонить</a>
+          </div>
+        </div>
+        <div>
+          <h3>Что даём</h3>
+          <ul class="perks" style="margin-top:14px">
+            <li>Питание выделяется</li>
+            <li>Премии 10 000 / 20 000 / 30 000 ₽ за выполнение месячных планов</li>
+            <li>Работа в тёплом торговом центре, бесплатная парковка</li>
+            <li>Обучение и стажировка, руководитель всегда на связи</li>
+            <li>Медкнижка — есть или готовность оформить (подскажем, где быстро)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <p class="eyebrow">Наши точки</p>
+      <h2 style="margin-top:14px">Где нас найти</h2>
+      <p class="lead" style="margin-top:18px">Первая точка открылась в МЕГЕ Парнас в сентябре 2026 года. Следующие адреса появятся здесь.</p>
+      <div class="contacts">
+        <div class="place reveal">
+          <div>
+            <p class="eyebrow" style="color:var(--muted)">Точка № 1 · Санкт-Петербург</p>
+            <h3 style="margin-top:8px">МЕГА Парнас</h3>
+            <p class="addr" style="margin-top:10px">Ленинградская область, Всеволожский район, д. Порошкино, КАД 117 км, стр. 1<br><span style="color:var(--muted)">1 этаж, у детской площадки, площадка 510KSK-06</span></p>
+          </div>
+          <div class="hours"><span class="dot"></span> Ежедневно 10:00–22:00</div>
+          <p style="color:var(--muted)">Вопросы гостей, сотрудничество с торговыми центрами и площадками, вакансии: <a href="mailto:dimasova0404@yandex.ru" style="color:var(--mint-deep);font-weight:600">dimasova0404@yandex.ru</a></p>
+          <div class="links">
+            <a class="btn btn-primary" href="https://yandex.ru/maps/?text=%D0%9C%D0%95%D0%93%D0%90%20%D0%9F%D0%B0%D1%80%D0%BD%D0%B0%D1%81" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+            <a class="btn btn-ghost" href="https://yandex.ru/maps/?rtext=~60.0838%2C30.3417&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+            <a class="btn btn-ghost" href="https://2gis.ru/spb/search/%D0%9C%D0%95%D0%93%D0%90%20%D0%9F%D0%B0%D1%80%D0%BD%D0%B0%D1%81" target="_blank" rel="noopener">Открыть в 2ГИС</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <div class="fallback"><p>Карта загружается… Если она не появилась — откройте точку по кнопке «Открыть в Яндекс Картах».</p></div>
+          <iframe title="Кукурай на карте — МЕГА Парнас" src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%95%D0%93%D0%90%20%D0%9F%D0%B0%D1%80%D0%BD%D0%B0%D1%81&ll=30.3417%2C60.0838&z=15" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Кукурай · ИП Савинов Д.А. · ИНН 780262570174 · ОГРНИП 322784700340172</span>
+    <span>Горячая кукуруза в стаканчиках · Санкт-Петербург и Ленинградская область</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) return;
+    var els = document.querySelectorAll('.reveal');
+    els.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight) el.classList.add('pre');
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

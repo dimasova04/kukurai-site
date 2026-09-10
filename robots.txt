@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kukuraispb.ru/sitemap.xml
